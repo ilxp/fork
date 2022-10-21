@@ -1,0 +1,25 @@
+name: Fork
+on:
+  workflow_dispatch:
+
+#  schedule:
+#    - cron: 0 8 */5 * *
+
+jobs: 
+  build:
+    runs-on: Ubuntu-20.04
+    name: fork仓库
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    
+    - name: fork
+      uses: TobKed/github-forks-sync-action@master
+      with:
+        github_token: ${{ secrets.REPO_TOKEN }}
+        upstream_repository: CCnut/feed-netkeeper
+        upstream_branch: LUCI-LUA-UCITRACK
+        target_repository: 281677160/feed-netkeeper
+        target_branch: LUCI-LUA-UCITRACK
+        force: true
+        tags: false
