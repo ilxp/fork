@@ -17,9 +17,9 @@ jobs:
       uses: TobKed/github-forks-sync-action@master
       with:
         github_token: ${{ secrets.REPO_TOKEN }}
-        upstream_repository: dev-drprasad/delete-older-releases
-        upstream_branch: master
-        target_repository: danshui-git/delete-older-releases
+        upstream_repository: klever1988/cachewrtbuild
+        upstream_branch: test
+        target_repository: danshui-git/cachewrtbuild
         target_branch: main
         force: true
         tags: false
