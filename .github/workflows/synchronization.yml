@@ -7,7 +7,7 @@ on:
 
 jobs: 
   build:
-    runs-on: Ubuntu-20.04
+    runs-on: ubuntu-20.04
     name: fork仓库
     steps:
     - name: Checkout
@@ -17,9 +17,9 @@ jobs:
       uses: danshui-git/synchronise-forks@main
       with:
         github_token: ${{ secrets.REPO_TOKEN }}
-        upstream_repository: klever1988/cachewrtbuild
-        upstream_branch: test
-        target_repository: danshui-git/cachewrtbuild
+        upstream_repository: 281677160/build-actions
+        upstream_branch: main
+        target_repository: danshui-git/build-actions
         target_branch: main
         force: true
         tags: false
