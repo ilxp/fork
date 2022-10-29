@@ -17,8 +17,8 @@ jobs:
       uses: danshui-git/synchronise-forks@main
       with:
         github_token: ${{ secrets.REPO_TOKEN }}
-        upstream_repository: 281677160/build-actions
-        upstream_branch: main
+        upstream_repository: Lienol/openwrt
+        upstream_branch: 837104ec79314536160d6f2406c7989b014ac198
         target_repository: danshui-git/build-actions
         target_branch: main
         force: true
