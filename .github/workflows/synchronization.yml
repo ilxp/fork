@@ -23,3 +23,14 @@ jobs:
         target_branch: main
         force: true
         tags: false
+    
+    - name: 拉取CGCTFW的openwrt稳定版本18.06仓库
+      uses: danshui-git/github-forks-sync-action@main
+      with:
+        github_token: ${{ secrets.REPO_TOKEN }}
+        upstream_repository: immortalwrt/immortalwrt      #别人仓库的帐号/仓库名字
+        upstream_branch: openwrt-18.06                    #别人仓库的仓库的分支
+        target_repository: project-lede/lede               #修改成你的帐号/仓库名字
+        target_branch: 18.06                                #你仓库的分支
+        force: true
+        tags: false
